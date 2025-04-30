@@ -1,0 +1,643 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+:root{
+    --pink: #E6919B;
+    --yellow:#FCD786;
+    --lt-pink:#FBD8CF;
+    --purple:#BD9CD1;
+    --white: #FFFFFF;
+    --dark:#292c37;
+    --font: "coronet-script-ludlow", sans-serif;
+    --font-body:"constantia", sans-serif;
+}
+
+#skip{
+    position: absolute;
+    left: -1000px;
+} 
+html{
+    background-color: var(--white);
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.22' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+#wrapper{
+    width: 1280px;
+    margin: 0 auto;
+    box-shadow: 0 10px 10px rgba(230, 145, 155, 0.6);
+}
+ body.dark #wrapper{
+    box-shadow: 0 10px 10px rgba(252, 215, 134, 0.3);
+}
+/* https://heropatterns.com/ */
+
+body.dark {
+background-color: var(--dark);
+background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23dbdbdb' fill-opacity='0.22' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+body.dark #home h2, body.dark #game h2{
+    color: var(--dark);
+}
+
+body.dark #menu, body.dark #contact{
+    background-color: var(--dark);
+}
+body.dark #menu p, body.dark #contact p{
+    color:var(--purple);
+}
+body.dark #menu p + p {
+    color: var(--yellow);
+
+}
+body.dark #contact label, body.dark #contact legend{
+    color: var(--pink);
+}
+
+body.dark .location:hover{
+    background-color: var(--yellow);
+    transition: .5s ease-in;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: var(--dark);
+  width: 40px;
+  height: 20px;
+  border-radius: 50px;
+  position: relative;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+}
+
+/* I used https://www.w3schools.com/howto/howto_css_switch.asp to help with the toggle */
+.checkbox-label .round {
+  background-color: var(--yellow);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.checkbox:checked + .checkbox-label .round {
+  transform: translateX(20px);
+}
+
+h1,h2,h3,h4{
+    font-weight: bold;
+}
+h2{
+    font-size: 45px;
+    color: var(--pink);
+    font-family: var(--font);
+}
+h3{
+    font-size: 30px;
+    color: var(--pink);
+}
+h4{
+    visibility: hidden;
+}
+p{
+    font-size: 20px;
+    color: var(--dark);
+}
+header{
+    background-color: var(--yellow);
+    padding: 20px;
+    display: grid;
+    border-bottom: solid 3px var(--purple);
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 20px;
+}
+
+nav li a:hover{
+    text-decoration: 6px underline overline var(--pink);
+}
+
+nav h2{
+    visibility: hidden;
+}
+header a{
+    text-decoration: none;
+    color: var(--dark);
+
+}
+header h1{
+    font-family: var(--font);
+    font-size: 90px;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 50px;
+    
+}
+
+h1 a:hover{
+    color: var(--pink);
+    transition: all .6s ease-in-out;
+    text-shadow: 2px 2px 5px var(--white);
+
+}
+
+#hero{
+    position: relative;
+    border-bottom: 4px solid var(--yellow);
+}
+#hero img{
+    display: block;
+    max-width: 100%;
+    height:auto;
+    margin: 0 auto;
+} 
+
+/* intro */
+#home {
+    padding: 60px;
+    display: flex;
+    margin: 0 auto;
+    background-color: var(--lt-pink);
+    line-height: 1.6;
+    align-items: center;
+}
+
+#home div{
+    flex: 1;
+}
+
+#home h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#home p {
+    padding: 10px 0;
+    font-size: 1.1em;
+    max-width: 750px;
+}
+#home img{
+    width: 300px;
+    height: auto;
+    box-shadow: 10px 15px  rgba(0, 0, 1, 0.10);
+}
+
+/* Menu Items */
+
+.product-content .left {
+    text-align: center;
+}
+
+.hiddenItem {
+    display: none;
+}
+
+#product1 .product-content, #product2 .product-content, #product3 .product-content, #product4 .product-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#switcherButtons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    width: fit-content;
+    margin: 2rem auto;
+    
+}
+
+#menu{
+    padding: 30px;
+    border-bottom: dotted 2px var(--purple);
+    background-color: var(--white);
+ 
+}
+#menu h2{
+    text-align: center;
+    
+}
+#menu p{
+    text-align: center;
+    padding: 20px 30px 0;
+    line-height: 1.5;
+}
+.left img{
+    border: 3px dotted var(--yellow);
+    transition: all .5s ease-in;
+}
+.left img:hover{
+  transform: scale(1.06);
+   transition: all .5s ease-in-out;
+    border: 5px double var(--purple);
+}
+.right p + p {
+    font-weight: bold;
+    padding-top: 3px;
+}
+.right p + p:hover{
+    text-shadow: 3px 2px 8px var(--yellow);
+}
+#menu h3{
+    padding: 30px;
+}
+button img{
+    width: 80px;
+    border-radius: 50%;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    border: 3px solid var(--pink);
+    transition: .7s ease-out;
+    transform: rotate(360deg);
+}
+
+/* guess the number game */
+#game{
+	margin-top: 2rem;	
+	padding: 5rem;
+    background-color: var(--lt-pink);
+    margin: 0 auto;
+    border-bottom: dotted 2px var(--purple);
+}
+#game h2{
+    font-family: var(--font);
+    padding: 3px ;
+    text-align: center;
+    grid-column: 1/-1;
+}
+#gameDisplay h4{
+    text-align: center;
+}
+#game div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	max-width: 750px;
+	margin: 0 auto;
+}
+.message{
+    visibility: hidden;
+    color: var(--pink);
+    background-color: var(--white);
+    font-size: 15px;
+    padding: 1px;
+}
+
+
+#game form{
+	padding: 2rem;
+}
+
+#gameDisplay p{
+	padding: 2rem;
+}
+
+#guessGame{
+    padding: 4px;
+    background-color: var(--yellow);
+    border: solid 1px var(--purple);
+}
+
+#guessGame:hover{
+    background-color: var(--purple);
+}
+  
+#guessGame:focus{
+    border: 2px solid var(--pink);
+    color: var(--white);
+}
+
+#numGuess{
+    padding: 3px;
+    margin-top: 10px;
+    background-color: var(--white);
+    border: 2px solid var(--pink);
+}
+
+#gameOutput{
+    color: var(--pink);
+    line-height: 1.5;
+    text-align: center;
+    padding: 2px;
+    font-weight: bold;
+}
+/* Form */
+
+#contact{
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.form-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap:1rem; 
+    align-items: flex-start; 
+    padding: 0 2rem;
+}
+
+#form{
+    margin-top: 2rem ;
+    flex: 1;
+}
+
+form {
+    max-width: 550px;
+}
+
+.hidden { 
+    visibility: hidden;
+}
+
+label, legend{
+    display: block;
+    padding: 3px;
+    font-weight: bold;
+    margin-bottom: 1px;
+    color: var(--dark);
+    text-align: left;
+} 
+.required{
+    display: inline-block;
+    color: var(--yellow);
+    font-weight: bold;
+
+}
+input[type="text"], input[type="email"], input[type="tel"]{
+    display: block;
+    width: 100%;
+    padding: 0.25rem ;
+    background-color: var(--lt-pink);
+    color: var(--dark);
+    border: none;
+    height: 2.5rem;
+}
+
+#myFName:hover, #myLName:hover, #myEmail:hover,#myPhone:hover{
+    border: double 4px var(--purple);
+    transition: .2s ease-in;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+.guide {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: var(--dark);
+    font-family: var(--font-body);
+}
+
+#contactInfo p {
+    text-align: center;
+    font-size: 12px;
+    color: var(--purple);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#contact h2{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#contact p{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset{
+    width: 95%;
+    margin: 2.5rem auto 2.5rem auto;
+    display: grid;
+    border: 1px solid var(--pink);
+	padding: 10px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.radio {
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+  
+.radio_input {
+    position: relative;
+    width: 15px;
+    height: 15px;
+}
+  
+label.radio{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.radio_control {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--lt-pink);
+    border-radius: 50%;
+    background-color: var(--lt-pink);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+.radio_input input[type="radio"]:checked + .radio_control {
+    background-color: var(--purple);
+    border: 2px solid var(--pink);
+}
+  
+
+#myFName:hover, #myLName:hover, #myEmail:hover,#myPhone:hover{
+    border: double 4px var(--purple);
+    transition: .2s ease-in;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+input:focus,
+textarea:focus {
+    border: double 4px var(--yellow);
+}
+
+.contact-img {
+    padding: 0 4rem;
+}
+
+.location {
+    background-color: var(--lt-pink);
+    padding: 5rem;
+    border-radius: 20px;
+    margin-top: 6rem;
+}
+.location:hover{
+   background-color: var(--pink);
+   transition: .5s ease-in;
+}
+.location h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+.location p{
+    color: var(--dark);
+}
+
+.contact-img img {
+    max-width: 200%;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+#contact a{
+    text-decoration: none;
+    padding: 15px;
+    color: var(--pink) ;
+    font-weight: bolder;
+    font-size: 45px;
+    margin: 94%;
+    
+}
+#contact a:focus{
+    color: var(--purple) ;
+}
+
+#myMessage{
+    display: block;
+    width: 100%;
+    background-color: var(--lt-pink);
+    border: none;
+}
+#myMessage:hover{
+    border: double 4px var(--purple);
+    transition: .2s ease-out;
+}
+
+#mySubmit{
+    display: block;
+    padding: 0.75rem;
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--pink);
+    outline: none;
+    border: none;
+    color: var(--dark);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+  
+#mySubmit:hover{
+    background-color: var(--purple);
+    color: var(--white);
+}
+  
+#mySubmit:focus{
+    border: 2px solid var(--yellow);
+}
+
+
+#results {
+    margin-top: 3rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--dark);
+    border-radius: 10px;
+    padding: 30px;
+    width: 75%;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* footer */
+footer{
+    background-color: var(--yellow);
+    border-top: solid 3px var(--purple);
+    padding: 30px;
+    text-align: center;
+}
+
+#socials ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0;
+} 
+
+
+
+
