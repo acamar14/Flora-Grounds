@@ -62,6 +62,10 @@ table {
     --purple:#BD9CD1;
     --white: #FFFFFF;
     --dark:#292c37;
+    --white-shadow: rgba(255, 255, 255, 0.9);
+    --dark-shadow: rgba(0,0,0,0.3);
+    --pink-shadow: rgba(230, 145, 155, 0.6);
+    --yellow-shadow:rgba(252, 215, 134, 0.3);
     --font: "coronet-script-ludlow", sans-serif;
     --font-body:"constantia", sans-serif;
 }
@@ -77,10 +81,10 @@ html{
 #wrapper{
     width: 1280px;
     margin: 0 auto;
-    box-shadow: 0 10px 10px rgba(230, 145, 155, 0.6);
+    box-shadow: 0 10px 10px var(--pink-shadow);
 }
  body.dark #wrapper{
-    box-shadow: 0 10px 10px rgba(252, 215, 134, 0.3);
+    box-shadow: 0 10px 10px var(--yellow-shadow);
 }
 /* https://heropatterns.com/ */
 
@@ -610,13 +614,13 @@ textarea:focus {
 
 #results {
     margin-top: 3rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--white-shadow);
     color: var(--dark);
     border-radius: 10px;
     padding: 30px;
     width: 75%;
     font-size: 1.1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px var(--dark-shadow);
     transition: all 0.3s ease-in-out;
 }
 
