@@ -614,6 +614,7 @@ textarea:focus {
 
 #results {
     margin-top: 3rem;
+    margin-left: 25px ;
     background: var(--white-shadow);
     color: var(--dark);
     border-radius: 10px;
