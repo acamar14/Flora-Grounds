@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="website promoting new coffee shop called Flora Grounds Cafe">
+    <meta name="keywords" content="coffee, flowers, cafe, menu">
+    <meta name="author" content="Aaliyah Camarena">
+
+    <title>Flora Grounds Cafe</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/fsm4swp.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="obfuscated.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" id="skip">Skip to Main Content</a>
+ <div id="wrapper">
+    <header>
+        <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <span class="round"></span>
+            </label>
+          </div>
+    <div>
+        <h1><a href="index.html">Flora Grounds Cafe</a></h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </div>  
+    </header>
+  <main>
+        <div id="hero">
+         <img src="matcha.jpg" alt="making matcha with a matcha set next to lavender flowers to the right" width="1280"> 
+        </div>
+
+    <section id="home">
+        <div>
+            <h2>Welcome to Flora Grounds Cafe!</h2>
+            <p>Where every sip is a bouquet and every bloom comes with warmth. We blend locally roasted coffee with artisan floral arrangements, curated with love.</p>  
+            <p>Our coffee is locally roasted to perfection, highlighting bold flavors and gentle notes that awaken the senses. Each floral arrangement is thoughtfully curated by our team of artisans, combining seasonal flowers with personal touches to create pieces that speak from the heart.</p>
+            <p>We invite you to slow down and savor the moment. Because to us, every cup and every petal tells a story and we can’t wait to share ours with you.</p>
+        </div>
+        <img src="coffee-shop.jpg" alt="window with sign that says-never too late for coffee - with lots of plants in front of it">
+    </section>
+
+  <section id="menu">
+            <h2>Menu</h2>
+            <p>Here are some of our best-loved picks! Whether you're in the mood for something strong and bold or light and refreshing, our top-sellers range from classic coffees to flavorful teas and more.</p>
+            <section id="product1" class="currentItem">
+            <div class="product-content">
+                <div class="left">
+                    <h3>Flora Roast</h3>
+                    <img src="coffee-white-flowers.jpg" alt="Woven purse next to white flowers and iced coffee" width="400">
+                    </div>
+                    <div class="right">
+                    <p>A smooth, medium-bodied coffee with gentle floral notes and a hint of natural sweetness. </p>
+                    <p>Notes: Chamomile, Lavender, lightly roasted beans</p>
+                    </div>
+            </div>
+                </section>
+
+                <section id="product2" class="hiddenItem">
+                    <div class="product-content">
+                        <div class="left">
+                    <h3>Blossom Macchiato</h3>
+                    <img src="caramel.jpg" alt="iced coffee half coffee and half milk" width="400">
+                    </div>
+                    <div class="right">
+                    <p>Bold espresso meets creamy milk and golden caramel, with a soft floral twist of vanilla orchid. Sweet, smooth, and garden-kissed</p>
+                    <p>Notes: Espresso, Vanilla orchid, Caramel drizzle</p>
+                </div>
+            </div>    
+                </section>
+            <section id="product3" class="hiddenItem">
+                    <div class="product-content">
+                        <div class="left">
+                    <h3>The Steeping Garden</h3>
+                    <img src="tea-and-flowers.jpg" alt="Greenery background with gold tea cup with chamomile flowers" width="400">
+                    </div>
+                    <div class="right">
+                    <p>Romantic and rustic all in one sip.</p>
+                    <p>Notes: Rose, Cinnamon, Espresso</p>
+                    </div>
+                </div>
+            </section>
+            <section id="product4" class="hiddenItem">
+                    <div class="product-content">
+                        <div class="left">
+                    <h3>The Spiced Garden</h3>
+                    <img src="ice-coffee.jpg" alt="picture of pink flowers and hot coffee cup" width="400">
+                    </div>
+                    <div class="right">
+                    <p>Cinnamon, nutmeg, and a hint of wildflower honey — like a cozy stroll through a blooming garden.</p>
+                    <p>Notes: Spices, Honey, Cold brew</p>
+                </div>
+                </div>
+            </section>
+
+           <div>
+            <section id="switcherButtons">
+                <h3 class="sr-only">Click on a Button to View our Menu</h3>
+                <button id="btn1"><img src="1.png" alt="Flora Roast"></button>
+                <button id="btn2"><img src="2.png" alt="Blossom Macchiato"></button>
+                <button id="btn3"><img src="3.png" alt="The Steeping Garden" ></button>
+                <button id="btn4"><img src="4.png" alt="The Spiced Garden"></button>
+            </section>
+           </div>
+         </section>
+
+
+    <section id="game">
+		<div>
+			<h2>Guess the Secret Blend!</h2>
+			<form>
+				<label for="numGuess">Enter a Number Between 1 and 10:</label>
+				<span class="message">Please enter a number from 1 to 10</span>
+				<input type="number" name="numGuess" id="numGuess">
+				<input type="submit" name="guessGame" id="guessGame" value="Play the Game!">
+			</form>
+			<section id="gameDisplay">
+                <h4>Can you Guess??</h4>
+				<p>Think you can guess the mystery roast of the day? Guess correctly and get 20% off your next purchase!!</p>
+			</section>
+        </div>
+        <p id="gameOutput">.</p>
+	</section>
+
+   <section id="contact">
+            <h2>Contact Us</h2>
+    
+            <p>Got a question? Want to place a custom order or just say hi? We’d love to hear from you!<br>Fill out the form below and we’ll get in touch soon.</p>
+      <div class="form-wrap">
+        <div id="form">
+            <form id="contactInfo" action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="GET">
+                <label for="myFName">First Name: <span class="required">*</span><span class="guide"> (minimum of one each: A-Z, a-z)</span></label>
+                <input type="text" name="myFName" id="myFName"><p class="hidden">First Name must be at least 4 characters and can include uppercase or lowercase letters</p>
+                                                                                        
+                <label for="myLName">Last Name: <span class="required">*</span><span class="guide">(minimum of one each: A-Z, a-z)</span></label>
+                <input type="text" name="myLName" id="myLName"><p class="hidden">Last name must be at least 4 characters and can include uppercase or lowercase letters</p>
+
+                <label for="myEmail">Email: <span class="required">*</span></label>
+                <input type="email" name="myEmail" id="myEmail" ><p class="hidden">Please enter a valid email address(must be at least six characters and can include uppercase or lowercase letters, numbers, and @ - \ _ !)</p>
+                <label for="myPhone">Phone: <span class="required">*</span></label>
+                <input type="tel" name="myPhone" id="myPhone" ><p class="hidden">Please enter a valid phone number(must be at least six characters, numbers, and @ - \ _ !)</p>
+
+                <label for="myMessage">Message: <span class="guide">(Optional — we'd love to hear why you're reaching out!)</span></label>
+                <textarea name="myMessage" id="myMessage"></textarea>
+
+                <fieldset>
+                    <legend>Preferred Way of Contact: <span class="required">*</span></legend>
+                    <label for="phone" class="radio">
+                      <span class="radio_input">
+                        <input type="radio" name="contactMethod" id="phone" value="phone" required checked>
+                        <span class="radio_control"></span>
+                      </span>
+                      <span class="radio_label">Phone</span>
+                    </label>
+                    <label for="email" class="radio">
+                        <span class="radio_input">
+                          <input type="radio" name="contactMethod" id="email" value="email">
+                          <span class="radio_control"></span>
+                         </span>
+                         <span class="radio_label">Email</span>
+                      </label>
+                </fieldset> 
+                <input type="submit" name="mySubmit" id="mySubmit" value="Submit Form">
+            </form>
+            <ol id="results" class="hidden"></ol>
+        </div>
+
+        <div class="location">
+            <h3>Visit Us</h3>
+            <p>123 Bloom Blvd.<br>Petal Town, AZ 33333</p>
+            <p><strong>Hours:</strong><br>Mon–Fri: 9am–6pm<br>Sat: 10am–4pm</p>    
+        <div class="contact-img">
+        <img src="cupofcoffee.jpg" alt="a cup of coffee with beautiful flowers across with lots of accents of greenery">
+       </div>
+     </div>
+    </div>
+        <a href="#skip">⇧</a>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer container">
+            <section id="socials">
+                <h5><br>Follow us @BloomandBrew</h5>
+                <ul>
+                    <li><a href="https://instagram.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#E6919B" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M16.5 7.5l0 .01" />
+                </svg>
+                    </a></li>
+                    
+                    <li><a href="https://twitter.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#BD9CD1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+                </svg>
+                    </a></li>
+                    
+                    <li><a href="https://www.facebook.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                </svg>
+                    </a></li>
+                </ul>
+            </section>
+            <small>Copyright 2025 - Aaliyah Camarena</small>
+    
+        </div>
+    </footer>
+ </div>
+</body>
+</html>
+
+ 
